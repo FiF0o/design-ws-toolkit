@@ -10,7 +10,7 @@ import {config} from './config';
 
 const templates = fs.readdirSync(path.resolve(__dirname, config.src.templates)).filter(fname => fname.match(`${config.templates.ext}`))
 
-// starts webserver
+// gets webserver gulp task
 gulpServer(gulp)
 
 gulp.task('clean', (cb) => {
@@ -18,4 +18,4 @@ gulp.task('clean', (cb) => {
     cb()
 })
 
-gulp.task('default', ['clean', 'start:server'], () => console.log('Default task'))
+gulp.task('default', ['clean', 'start:server'], () => console.log('Dev mode is running...!'))

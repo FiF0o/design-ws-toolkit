@@ -3,7 +3,7 @@
  */
 export const config = {
     server: {
-        port: 3456
+        port: 34567
     },
     templates: {
         ext: '.mustache'
