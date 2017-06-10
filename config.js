@@ -2,6 +2,10 @@
  * Created by jonlazarini on 09/06/17.
  */
 export const config = {
+    entries: {
+        css: 'main.scss',
+        js: 'main.js'
+    },
     server: {
         port: 34567
     },
@@ -13,7 +17,7 @@ export const config = {
         assets: './src/assets/',
         data: './src/data/',
         js: './src/js/',
-        styles: 'sass',
+        styles: './src/sass/',
         templates: './src/templates/'
 
     },

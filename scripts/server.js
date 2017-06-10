@@ -4,13 +4,11 @@
 import connect from 'gulp-connect';
 import open from 'gulp-open';
 
-import {config} from '../config';
-
-export const gulpServer = (gulp) => {
+export const gulpServer = (gulp, config) => {
 
     // creates server
     gulp.task('server', () => {
-        connect.server({
+        return connect.server({
             root: 'dist',
             livereload: true,
             port: config.server.port
@@ -18,10 +16,12 @@ export const gulpServer = (gulp) => {
     })
 
     gulp.task('open', () => {
-        gulp.src('')
+        return gulp.src('')
             .pipe(open({uri: `http://localhost:${config.server.port}`}))
     })
 
-    return gulp.task('start:server', ['server'], (cb) => gulp.start('open', cb))
+    gulp.task('start:server', ['clean'], (cb) => {
+        return gulp.start('server', 'open', cb)
+    })
 
 }

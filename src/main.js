@@ -3,6 +3,9 @@
 	pixelarity.com | hello@pixelarity.com
 	License: pixelarity.com/license
 */
+import $ from 'jquery'
+import skel from './js/skel.min'
+// console.log(typeof $)
 
 $(function() {
 
@@ -45,7 +48,8 @@ $(function() {
 			});
 
 		// Fix: Placeholder polyfill.
-			$form.placeholder();
+		//TODO no placeholder() function in the code???
+		// 	$form.placeholder();
 
 	// Touch?
 		if (skel.vars.touch)
@@ -346,7 +350,9 @@ $(function() {
 
 				// Check if URL fragment for a slide exists
 				// and switchTo it
-				$(window).load(function(){
+				//TODO old jquery < 2.3 - breaking change in 3.0
+				// $(window).load(function(){
+				$(window).on('load', function(){
 					setTimeout(function() {
 						if(window.location.hash){
 							var slideId = window.location.hash.substr(1);
