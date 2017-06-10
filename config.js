@@ -2,6 +2,9 @@
  * Created by jonlazarini on 09/06/17.
  */
 export const config = {
+    server: {
+        port: 3456
+    },
     templates: {
         ext: '.mustache'
     },

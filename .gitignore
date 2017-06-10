@@ -61,3 +61,6 @@ typings/
 
 # Prod
 dist/
+
+# Other
+.idea
