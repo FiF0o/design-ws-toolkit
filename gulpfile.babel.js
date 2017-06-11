@@ -41,9 +41,9 @@ gulpServer(gulp, config)
 
 
 /** Clean **/
-gulp.task('clean', () => {
+gulp.task('clean', (cb) => {
     // tells gulp clean is done for our next async function - cb - next function
-    return del.sync([path.resolve(__dirname, config.dist.root, '*')], {force: true})
+    return del.sync([path.resolve(__dirname, config.dist.root, '*')], {force: true}, cb())
 })
 
 
@@ -104,6 +104,10 @@ const templates = fs.readdirSync(path.resolve(__dirname, config.src.templates)).
 
 /** Assets **/
 gulp.task('assets', assets(gulp, config))
+
+
+//TODO Add task to build js without watchify
+gulp.task('build', ['clean'], (cb) => gulp.start('js', 'sass', 'assets', cb))
 
 
 /** Start **/
