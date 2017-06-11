@@ -16,6 +16,7 @@ import buffer from 'vinyl-buffer';
 import chalk from 'chalk';
 import rename from 'gulp-rename';
 import uglify from 'gulp-uglify';
+import connect from 'gulp-connect';
 
 import assign from 'lodash/assign';
 
@@ -62,6 +63,7 @@ gulp.task('sass', () => {
         .on('error', onError)
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.dist.root))
+        .pipe(connect.reload())
 })
 
 
@@ -94,6 +96,7 @@ const bundle = () => {
         .pipe(uglify())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(config.dist.root))
+        .pipe(connect.reload())
 }
 bundler.on('update', bundle)
 bundler.on('log', gutil.log)
@@ -113,5 +116,12 @@ gulp.task('lint', ['lint:all'])
 gulp.task('build', ['clean'], (cb) => gulp.start('js', 'sass', 'assets', cb))
 
 
+/** WATCH **/
+gulp.task('watch', () => {
+    gulp.watch([`${config.src.js}**/*.js`], ['js'])
+    gulp.watch([`${config.src.styles}**/*.scss`], ['js'])
+})
+
+
 /** Start **/
-gulp.task('default', ['clean', 'start:server'])
+gulp.task('default', ['clean', 'build', 'start:server', 'watch'])
