@@ -25,7 +25,7 @@ export const config = {
         root: './dist',
         js: './dist',
         css: './dist',
-        assets: './assets/',
+        assets: './dist/assets/',
         images: './dist/assets/images/',
         fonts: './dist/assets/fonts/',
     }
