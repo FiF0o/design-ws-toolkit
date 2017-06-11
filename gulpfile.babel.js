@@ -21,6 +21,7 @@ import assign from 'lodash/assign';
 
 import {gulpServer} from './scripts/server';
 import {assets} from './scripts/assets';
+import {lint} from './scripts/lint';
 
 import {config} from './config';
 
@@ -38,6 +39,7 @@ const onError = (err) => {
  */
 // gets webserver gulp task
 gulpServer(gulp, config)
+lint(gulp, config)
 
 
 /** Clean **/
@@ -107,6 +109,7 @@ gulp.task('assets', assets(gulp, config))
 
 
 //TODO Add task to build js without watchify
+gulp.task('lint', ['lint:all'])
 gulp.task('build', ['clean'], (cb) => gulp.start('js', 'sass', 'assets', cb))
 
 
