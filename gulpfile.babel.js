@@ -17,6 +17,9 @@ import chalk from 'chalk';
 import rename from 'gulp-rename';
 import uglify from 'gulp-uglify';
 import connect from 'gulp-connect';
+import mustache from 'gulp-mustache';
+import htmlMin from 'gulp-htmlmin';
+// import vinylPaths from 'vinyl-paths';
 
 import assign from 'lodash/assign';
 
@@ -104,7 +107,26 @@ gulp.task('js', bundle)
 
 
 /** Templates **/
-const templates = fs.readdirSync(path.resolve(__dirname, config.src.templates)).filter(fname => fname.match(`${config.templates.ext}`))
+gulp.task('templates', () => {
+  const templates = fs.readdirSync(path.resolve(__dirname, config.src.templates)).map((f) => f.substr(0, f.length - 5))
+  let minifyOpts = {
+      collapseWhitespace: true,
+      minifyCss: true,
+      minifyJs: true
+  }
+
+  return templates.map((f) => {
+      gulp.src(`${config.src.templates}${f}${config.templates.ext}`)
+          .pipe(mustache(`${config.src.data}${f}.json`,
+            {},
+            {}))
+          .pipe(gulp.dest(`${config.dist.root}`))
+          .pipe(rename({basename: 'index', extname: '.html'}))
+          .pipe(htmlMin(minifyOpts))
+          // clean after yourself
+          .pipe(gulp.dest(`${config.dist.root}`))
+      })
+})
 
 
 /** Assets **/
@@ -113,7 +135,7 @@ gulp.task('assets', assets(gulp, config))
 
 //TODO Add task to build js without watchify
 gulp.task('lint', ['lint:all'])
-gulp.task('build', ['clean'], (cb) => gulp.start('js', 'sass', 'assets', cb))
+gulp.task('build', ['clean'], (cb) => gulp.start('js', 'sass', 'assets', 'templates', cb))
 
 
 /** WATCH **/

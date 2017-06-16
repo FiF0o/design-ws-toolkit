@@ -18,11 +18,7 @@
     "test": "test2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run buildIndex & npm run buildTiles & npm run buildSplit",
-    "buildIndex": "mustache data/index.data.json templates/index.mustache > index.html",
-    "buildTiles": "mustache data/empathize.data.json templates/tiles.mustache > empathize/index.html; mustache data/define.data.json templates/tiles.mustache > define/index.html; mustache data/ideate.data.json templates/tiles.mustache > ideate/index.html;  mustache data/test.data.json templates/tiles.mustache > test/index.html; mustache data/iterate.data.json templates/tiles.mustache > iterate/index.html;",
-    "buildSplit": "mustache data/prototype-home.data.json templates/fullscreen.mustache > prototypes/video.html; mustache data/prototype-one.data.json templates/split.mustache > prototypes/one.html;"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "design",
@@ -55,6 +51,8 @@
     "gulp-clean": "0.3.2",
     "gulp-connect": "5.0.0",
     "gulp-eslint": "3.0.1",
+    "gulp-htmlmin": "3.0.0",
+    "gulp-mustache": "2.3.0",
     "gulp-notify": "3.0.0",
     "gulp-open": "2.0.0",
     "gulp-plumber": "1.1.0",
@@ -65,6 +63,7 @@
     "gulp-uglify": "3.0.0",
     "gulp-util": "3.0.8",
     "vinyl-buffer": "1.0.0",
+    "vinyl-paths": "2.1.0",
     "vinyl-source-stream": "1.1.0",
     "watchify": "3.9.0"
   }

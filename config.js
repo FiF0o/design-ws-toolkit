@@ -10,7 +10,7 @@ export const config = {
         port: 34567
     },
     templates: {
-        ext: '.mustache'
+        ext: '.html'
     },
     src: {
         root: './src',
