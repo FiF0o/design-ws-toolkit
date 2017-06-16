@@ -14,19 +14,17 @@
       "browserify-shim"
     ]
   },
-  "directories": {
-    "test": "test2"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/gulp lint",
+    "start": "./node_modules/.bin/gulp",
+    "build": "./node_modules/.bin/gulp build"
   },
   "keywords": [
     "design",
     "thinking",
     "buildit",
-    "wiprodigital"
   ],
-  "author": "Marcos Peebles",
   "license": "MIT",
   "dependencies": {
     "jquery": "3.2.1",
