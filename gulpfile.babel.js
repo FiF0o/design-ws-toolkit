@@ -41,7 +41,7 @@ const onError = (err) => {
 /**
  * Add external gulp scripts - Make them available in our main file
  */
-// gets webserver gulp task
+// gets gulp tasks
 gulpServer(gulp, config)
 lint(gulp, config)
 
@@ -70,6 +70,7 @@ gulp.task('sass', () => {
 })
 
 
+/** JS **/
 const extraWatchifyArgs = {
     entries: [`${config.src.root}/${config.entries.js}`],
     debug: true,
@@ -80,7 +81,6 @@ const extraWatchifyArgs = {
         }
     }
 }
-/** JS **/
 const browserifyOpts = assign({}, watchify.args, extraWatchifyArgs)
 const bundler = watchify(browserify(browserifyOpts))
 // add transformations here
