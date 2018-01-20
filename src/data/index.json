@@ -16,11 +16,11 @@
         "class": "style1 center"
       },
       "img": {
-        "src": "sunbury/intro.jpg",
+        "src": "assets/images/intro.jpg",
         "position": "30% 50%"
       },
       "copy": {
-        "headingOne": "BP - Wipro Digital Workshop",
+        "headingOne": "Digital Workshop",
         "paragraph": "A multi-disciplinary team iteratively exploring BP decomissioning opportunities through design thinking."
       },
       "actions": [
@@ -33,7 +33,7 @@
         "class": "style2 left"
       },
       "img": {
-        "src": "sunbury/empathize.jpg",
+        "src": "assets/images/empathize.jpg",
         "position": "center"
       },
       "copy": {
@@ -42,7 +42,7 @@
       },
       "actions": [
         {"anchor": "Work &amp; Photos", "href": "empathize/index.html", "class": "button special"},
-        {"anchor": "Assets <span>(Dropbox)</span>", "href": "https://www.dropbox.com/sh/erpgfiufdqjnpn8/AACh6KHBb8kmruw01nwdqS__a?dl=0", "class": "button", "target": "_blank"}
+        {"anchor": "Assets <span>(Dropbox)</span>", "href": "#", "class": "button", "target": "_blank"}
       ]
     },
     {
@@ -51,7 +51,7 @@
         "class": "style2 left"
       },
       "img": {
-        "src": "sunbury/define.jpg",
+        "src": "assets/images/define.jpg",
         "position": "left"
       },
       "copy": {
@@ -60,7 +60,7 @@
       },
       "actions": [
         {"anchor": "Work &amp; Photos", "href": "define/index.html", "class": "button special"},
-        {"anchor": "Assets <span>(Google Drive)</span>", "href": "https://www.dropbox.com/sh/w49tsxfayauzxtb/AADKhe3YpRJiTfaHwha6EMOWa?dl=0", "class": "button", "target": "_blank"}
+        {"anchor": "Assets <span>(Google Drive)</span>", "href": "#", "class": "button", "target": "_blank"}
       ]
     },
     {
@@ -69,7 +69,7 @@
         "class": "style2 left"
       },
       "img": {
-        "src": "sunbury/ideate.jpg",
+        "src": "assets/images/ideate.jpg",
         "position": "left"
       },
       "copy": {
@@ -78,7 +78,7 @@
       },
       "actions": [
         {"anchor": "Work &amp; Photos", "href": "ideate/index.html", "class": "button special"},
-        {"anchor": "Assets <span>(Google Drive)</span>", "href": "https://www.dropbox.com/sh/okivo5aispkupw8/AABJA94v5ri3D_sDdPc_LKLja?dl=0", "class": "button", "target": "_blank"}
+        {"anchor": "Assets <span>(Google Drive)</span>", "href": "#", "class": "button", "target": "_blank"}
       ]
     },
     {
@@ -87,7 +87,7 @@
         "class": "style2 left"
       },
       "img": {
-        "src": "sunbury/prototype.png",
+        "src": "assets/images/prototype.png",
         "position": "left"
       },
       "copy": {
@@ -101,7 +101,7 @@
         "class": "style2 left"
       },
       "img": {
-        "src": "sunbury/test.jpg",
+        "src": "assets/images/test.jpg",
         "position": "left"
       },
       "copy": {
@@ -115,7 +115,7 @@
         "class": "style2 left"
       },
       "img": {
-        "src": "sunbury/iterate.jpg",
+        "src": "assets/images/iterate.jpg",
         "position": "left"
       },
       "copy": {
