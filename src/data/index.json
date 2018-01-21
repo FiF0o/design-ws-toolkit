@@ -1,5 +1,5 @@
 {
-  "title": "BP Workshop",
+  "title": "Workshop",
   "nav": [
     {"anchor": "Intro", "title": "Intro", "class": "intro", "href": "#intro"},
     {"anchor": "Empathize", "title": "Empathize", "class": "one", "href": "#one"},
@@ -16,12 +16,12 @@
         "class": "style1 center"
       },
       "img": {
-        "src": "assets/images/intro.jpg",
+        "src": "assets/images/iterate.jpg",
         "position": "30% 50%"
       },
       "copy": {
         "headingOne": "Digital Workshop",
-        "paragraph": "A multi-disciplinary team iteratively exploring BP decomissioning opportunities through design thinking."
+        "paragraph": "A multi-disciplinary team iteratively exploring opportunities through design thinking."
       },
       "actions": [
         {"anchor": "The journey", "href": "#one", "class": "button next"}
@@ -33,7 +33,7 @@
         "class": "style2 left"
       },
       "img": {
-        "src": "assets/images/empathize.jpg",
+        "src": "assets/images/iterate/Iterate-1.jpg",
         "position": "center"
       },
       "copy": {
@@ -69,7 +69,7 @@
         "class": "style2 left"
       },
       "img": {
-        "src": "assets/images/ideate.jpg",
+        "src": "assets/images/iterate/Iterate-11.jpg",
         "position": "left"
       },
       "copy": {
@@ -87,7 +87,7 @@
         "class": "style2 left"
       },
       "img": {
-        "src": "assets/images/prototype.png",
+        "src": "assets/images/iterate.jpg",
         "position": "left"
       },
       "copy": {
@@ -101,7 +101,7 @@
         "class": "style2 left"
       },
       "img": {
-        "src": "assets/images/test.jpg",
+        "src": "assets/images/iterate.jpg",
         "position": "left"
       },
       "copy": {
